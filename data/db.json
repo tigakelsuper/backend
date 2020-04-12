@@ -1,0 +1,75 @@
+{
+  "ids": {
+    "Project": 3,
+    "Team": 3,
+    "User": 4,
+    "UserCredentials": 4,
+    "PemesananMobil": 4,
+    "Mobil": 3,
+    "Supir": 3,
+    "RuangMeeting": 4,
+    "MeetingRoomReservation": 4,
+    "Inventory": 4,
+    "OrderInventory": 6,
+    "Catering": 4
+  },
+  "models": {
+    "Project": {
+      "1": "{\"id\":1,\"name\":\"project1\",\"balance\":90,\"ownerId\":1}",
+      "2": "{\"id\":2,\"name\":\"project2\",\"balance\":0,\"ownerId\":2}"
+    },
+    "Team": {
+      "1": "{\"id\":1,\"ownerId\":1,\"memberIds\":[1,2]}",
+      "2": "{\"id\":2,\"ownerId\":2,\"memberIds\":[2]}"
+    },
+    "User": {
+      "1": "{\"id\":1,\"username\":\"John\",\"email\":\"john@doe.com\"}",
+      "2": "{\"id\":2,\"username\":\"Jane\",\"email\":\"jane@doe.com\"}",
+      "3": "{\"id\":3,\"username\":\"Bob\",\"email\":\"bob@projects.com\"}"
+    },
+    "UserCredentials": {
+      "1": "{\"password\":\"$2a$10$Yn1/fMOjW6A.CdH7Yxb7weVFYmkcQJQBaYaiRScS6sw7ty3aL4lHu\",\"userId\":1,\"id\":1}",
+      "2": "{\"password\":\"$2a$10$Yn1/fMOjW6A.CdH7Yxb7weVFYmkcQJQBaYaiRScS6sw7ty3aL4lHu\",\"userId\":2,\"id\":2}",
+      "3": "{\"password\":\"$2a$10$Yn1/fMOjW6A.CdH7Yxb7weVFYmkcQJQBaYaiRScS6sw7ty3aL4lHu\",\"userId\":3,\"id\":3}"
+    },
+    "PemesananMobil": {
+      "1": "{\"id\":1,\"tanggal_pemesanan\":\"2020-04-04T00:00:00.000Z\",\"tipe_pemesanan\":\"dinas\",\"keterangan\":\"Dinas ke luar\",\"status_pemesanan\":\"approved\",\"userId\":3,\"mobilId\":\"B 2000 CD\"}",
+      "2": "{\"id\":2,\"userId\":2,\"mobilId\":\"B 3000 FE\",\"tanggal_pemesanan\":\"2020-04-03\",\"tipe_pemesanan\":\"ekpedisi\",\"keterangan\":\"Ekpedisi\",\"status_pemesanan\":\"approved\"}",
+      "3": "{\"id\":3,\"userId\":2,\"mobilId\":\"B 4000 GH\",\"tanggal_pemesanan\":\"2020-04-03\",\"tipe_pemesanan\":\"ekpedisi\",\"keterangan\":\"Ekpedisi\",\"status_pemesanan\":\"alocated\",\"supirId\":1}"
+    },
+    "Mobil": {
+      "1": "{\"nomor_polisi\":\"B 2000 CD\",\"tipe_mobil\":\"Daihatsu Xenia\",\"merek_mobil\":\"Daihatsu\",\"jumlah_kursi\":7,\"status_mobil\":\"tersedia\"}",
+      "2": "{\"nomor_polisi\":\"B 3000 FE\",\"tipe_mobil\":\"Mitsubishi Xpander\",\"merek_mobil\":\"Mitsubishi\",\"jumlah_kursi\":7,\"status_mobil\":\"booked\"}",
+      "3": "{\"nomor_polisi\":\"B 4000 GH\",\"tipe_mobil\":\"Kijang Innova\",\"merek_mobil\":\"Toyota\",\"jumlah_kursi\":7,\"status_mobil\":\"booked\"}"
+    },
+    "Supir": {
+      "1": "{\"id\":1,\"nama\":\"Doni\",\"nomor_handphone\":\"0812345789\",\"status_tersedia\":\"alocated\"}",
+      "2": "{\"id\":2,\"nama\":\"Bayu\",\"nomor_handphone\":\"0856345789\",\"status_tersedia\":\"tersedia\"}"
+    },
+    "RuangMeeting": {
+      "1": "{\"id_ruangan\":1,\"nama_ruangan\":\"Galaxy\",\"fasilitas_ruangan\":\"meja, kursi, papan tulis\",\"kapasitas\":3,\"foto\":\"\",\"status_tersedia\":\"available\"}",
+      "2": "{\"id_ruangan\":2,\"nama_ruangan\":\"Galaxy\",\"fasilitas_ruangan\":\"meja, kursi, papan tulis\",\"kapasitas\":3,\"foto\":\"\",\"status_tersedia\":\"available\"}",
+      "3": "{\"id_ruangan\":3,\"nama_ruangan\":\"Galaxy\",\"fasilitas_ruangan\":\"meja, kursi, papan tulis\",\"kapasitas\":3,\"foto\":\"\",\"status_tersedia\":\"available\"}"
+    },
+    "MeetingRoomReservation": {
+      "1": "{\"id_meeting_room_res\":1,\"ruangMeetingId\":1,\"userId\":2,\"agenda\":\"Rapat Internal IT\",\"waktu_meeting\":\"2020-04-04\",\"start_meeting\":\"2020-04-04\",\"end_meeting\":\"2020-04-04\",\"deskripsi\":\"\",\"status\":\"schedule_available\"}",
+      "2": "{\"id_meeting_room_res\":2,\"ruangMeetingId\":3,\"userId\":2,\"agenda\":\"Rapat Anggaran\",\"waktu_meeting\":\"2020-04-05\",\"start_meeting\":\"2020-04-05\",\"end_meeting\":\"2020-04-05\",\"deskripsi\":\"\",\"status\":\"schedule_available\"}",
+      "3": "{\"id_meeting_room_res\":3,\"ruangMeetingId\":2,\"userId\":3,\"agenda\":\"Rapat \",\"waktu_meeting\":\"2020-04-06\",\"start_meeting\":\"2020-04-06\",\"end_meeting\":\"2020-04-06\",\"deskripsi\":\"\",\"status\":\"schedule_available\"}"
+    },
+    "Inventory": {
+      "1": "{\"id_inventory\":1,\"nama_barang\":\"Seragam XY01\",\"tipe_barang\":\"Seragam\",\"stok\":100,\"nomor_barang\":\"001\",\"kode_barang\":\"AG001\",\"jumlah_kedatangan\":0,\"nomor_do\":\"DO-001\",\"nomor_po\":\"PO-001\"}",
+      "2": "{\"id_inventory\":2,\"nama_barang\":\"Meja Z001\",\"tipe_barang\":\"Meja\",\"stok\":200,\"nomor_barang\":\"002\",\"kode_barang\":\"CA001\",\"jumlah_kedatangan\":0,\"nomor_do\":\"DO-002\",\"nomor_po\":\"PO-002\"}",
+      "3": "{\"id_inventory\":3,\"nama_barang\":\"Kursi Hitam 008\",\"tipe_barang\":\"Kursi\",\"stok\":300,\"nomor_barang\":\"004\",\"kode_barang\":\"GG001\",\"jumlah_kedatangan\":0,\"nomor_do\":\"DO-003\",\"nomor_po\":\"PO-041\"}"
+    },
+    "OrderInventory": {
+      "1": "{\"id_order\":1,\"nomor_order\":\"123ABC\",\"jumlah\":5,\"waktu_ambil\":\"2020-04-04T00:00:00.000Z\",\"status_order\":\"cancelled\",\"inventoryId\":1,\"userId\":3,\"catatan_persetujuan\":\"\"}",
+      "2": "{\"id_order\":2,\"nomor_order\":\"156AAG\",\"jumlah\":10,\"waktu_ambil\":\"2020-04-04T00:00:00.000Z\",\"status_order\":\"ready to pickup\",\"inventoryId\":1,\"userId\":2}",
+      "3": "{\"id_order\":3,\"nomor_order\":\"190CGA\",\"jumlah\":20,\"waktu_ambil\":\"2020-04-04T00:00:00.000Z\",\"status_order\":\"rejected\",\"inventoryId\":2,\"userId\":1}"
+    },
+    "Catering": {
+      "1": "{\"id_catering\":1,\"userId\":1,\"departemen\":\"HC\",\"jumlah\":10,\"tanggal\":\"2020-04-12\",\"jenis_catering\":\"makan malam\"}",
+      "2": "{\"id_catering\":2,\"userId\":2,\"departemen\":\"IT\",\"jumlah\":5,\"tanggal\":\"2020-04-10\",\"jenis_catering\":\"makan siang\"}",
+      "3": "{\"id_catering\":3,\"userId\":3,\"departemen\":\"IT\",\"jumlah\":20,\"tanggal\":\"2020-04-08\",\"jenis_catering\":\"makan malam\"}"
+    }
+  }
+}
